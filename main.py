@@ -1,0 +1,1 @@
+# TODO: implementar extração de colunas específicas
