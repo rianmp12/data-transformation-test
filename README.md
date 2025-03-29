@@ -66,7 +66,7 @@ Este notebook não faz parte da lógica principal do teste e serve apenas como a
 - Leitura do PDF do Anexo I do Rol de Procedimentos da ANS.
 - Extração de todas as tabelas do documento.
 - Substituição das abreviações nas colunas OD e AMB conforme legenda:
-  - OD → Consultório
-  - AMB → Ambulatorial
+  - OD → Seg. Odontologica
+  - AMB → Seg. Ambulatorial
 - Exportação dos dados em arquivo `.csv`.
 - Compactação do arquivo `.csv` em um arquivo `.zip` com nome personalizado.
