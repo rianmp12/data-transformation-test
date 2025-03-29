@@ -19,16 +19,18 @@ def extract_tables_from_pdf(pdf_file):
         return pd.DataFrame()
 
 def replace_abbreviations_and_clean(df):
-    # Substituições no OD e AMB
-    for col in df.columns:
-        df[col] = df[col].replace("OD", "Consultório")
-        df[col] = df[col].replace("AMB", "Ambulatorial")
 
-    # Limpa quebras de linha nas células
     df = df.astype(str).apply(lambda col: col.str.replace('\n', ' ', regex=False))
 
     # Limpa e normaliza os nomes das colunas
-    df.columns = [col.replace('\n', ' ').replace("á", "a").strip() for col in df.columns]
+    df.columns = [
+        col.replace('\n', ' ')
+           .replace("á", "a")
+           .replace("OD", "SEG ODONTOLOGICA")
+           .replace("AMB", "SEG AMBULATORIAL")
+           .strip()
+        for col in df.columns
+    ]
 
     return df
 
