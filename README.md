@@ -48,6 +48,12 @@ As versões das bibliotecas estão fixadas no `requeriments.txt` para evitar pro
 python main.py
 ```
 
+## 📒 Notebook de visualização
+
+Foi adicionado um notebook simples em `notebooks/demonstracao_dados.ipynb` apenas para demonstrar a leitura e visualização básica dos dados extraídos do CSV.
+
+Este notebook não faz parte da lógica principal do teste e serve apenas como apoio.
+
 ## 📦 Bibliotecas utilizadas
 
 - `pdfplumber` - Utilizada para abrir o PDF e extrair tabelas de forma estruturada.
