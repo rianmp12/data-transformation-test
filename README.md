@@ -48,6 +48,12 @@ As versões das bibliotecas estão fixadas no `requeriments.txt` para evitar pro
 python main.py
 ```
 
+## 📒 Notebook de visualização
+
+Foi adicionado um notebook simples em `notebooks/demonstracao_dados.ipynb` apenas para demonstrar a leitura e visualização básica dos dados extraídos do CSV.
+
+Este notebook não faz parte da lógica principal do teste e serve apenas como apoio.
+
 ## 📦 Bibliotecas utilizadas
 
 - `pdfplumber` - Utilizada para abrir o PDF e extrair tabelas de forma estruturada.
@@ -60,7 +66,7 @@ python main.py
 - Leitura do PDF do Anexo I do Rol de Procedimentos da ANS.
 - Extração de todas as tabelas do documento.
 - Substituição das abreviações nas colunas OD e AMB conforme legenda:
-  - OD → Consultório
-  - AMB → Ambulatorial
+  - OD → Seg. Odontologica
+  - AMB → Seg. Ambulatorial
 - Exportação dos dados em arquivo `.csv`.
 - Compactação do arquivo `.csv` em um arquivo `.zip` com nome personalizado.
