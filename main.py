@@ -24,10 +24,10 @@ def replace_abbreviations_and_clean(df):
 
     # Limpa e normaliza os nomes das colunas
     df.columns = [
-        col.replace('\n', ' ')
+        col.replace('\n', '_')
            .replace("á", "a")
-           .replace("OD", "SEG ODONTOLOGICA")
-           .replace("AMB", "SEG AMBULATORIAL")
+           .replace("OD", "SEG_ODONTOLOGICA")
+           .replace("AMB", "SEG_AMBULATORIAL")
            .strip()
         for col in df.columns
     ]
@@ -36,7 +36,7 @@ def replace_abbreviations_and_clean(df):
 
 def save_and_compress_csv(df, csv_file, zip_file):
     os.makedirs(os.path.dirname(csv_file), exist_ok=True)
-    df.to_csv(csv_file, index=False, encoding='utf-8-sig')
+    df.to_csv(csv_file, sep=';', index=False, encoding='utf-8-sig')
 
     with zipfile.ZipFile(zip_file, "w") as zipf:
         zipf.write(csv_file, arcname=os.path.basename(csv_file))
